@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .icon-before::before {
+        position: relative;
+        top: 30px;
+        left: -25px;
+        content: "\f2b6"; /* 這是 email icon 的 Unicode */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900; /* 一些圖標可能需要加粗顯示 */
+        color: gray; /* 設置圖標顏色 */
+      }
+      .icon-before2::before {
+        position: relative;
+        top: 30px;
+        left: -25px;
+        content: "\f023"; /* 這是 email icon 的 Unicode */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900; /* 一些圖標可能需要加粗顯示 */
+        color: gray; /* 設置圖標顏色 */
+      }
+    </style>
+  </head>
+
+  <body class="d-flex flex-column h-100">
+    <header class="border-top border-5 border-primary">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fs-5">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-3" href="../index.html">logo</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../about.html">關於我們</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="../product-catalog.html">產品列表</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../store.html">門市店舖</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../question.html">常見問題</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../contact.html">聯絡我們</a>
+              </li>
+
+              <!-- 要用再說 -->
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  門市查詢
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li> -->
+            </ul>
+
+            <form class="d-flex">
+              <button
+                class="btn btn-link p-0 mx-3"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample"
+              >
+                <i class="bi bi-cart-fill text-white fs-4"></i>
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-link p-0"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="bi bi-person-lines-fill text-white fs-3"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <nav aria-label="breadcrumb" class="m-3">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./index.html">首頁</a></li>
+        <li class="breadcrumb-item" aria-current="page">
+          <a href="../product-catalog.html">產品列表</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">產品</li>
+      </ol>
+    </nav>
+
+    <!-- .container>.row>.col-12.col-lg-6*2 -->
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-12 col-md-5 offset-md-1 mb-2 d-flex flex-column justify-content-center align-items-center"
+        >
+          <img src="../img/product.jpg" class="img-fluid d-block mb-2 img1" alt="" />
+          <div>
+            <img
+              src="../img/product.jpg"
+              class="img-thumbnail me-1 img2"
+              width="60
+"
+              alt=""
+            />
+            <img
+              src="../img/product2.jpg"
+              class="img-thumbnail me-1 img3"
+              width="60
+"
+              alt=""
+            />
+            <img
+              src="../img/product3.jpg"
+              class="img-thumbnail me-1 img4"
+              width="60
+"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="col-12 col-md-5 offset-md-1">
+          <h1 class="fs-3 fw-bold">高大鮮乳236ml</h1>
+          <p class="text-secondary">
+            小小一罐，有著滿滿回憶與香醇口感！
+            <br />
+            近80年的老字號品牌——高大鮮乳
+            <br />
+            堅持百分之百新鮮，留住最香濃的滋味，陪伴著每個世代
+          </p>
+          <p>履歷認證鮮乳，品質哞問題！</p>
+          <p class="fs-4 fw-bold text-primary text-danger">NT$33</p>
+          <p>商品編號:</p>
+          <p>供貨狀況: 尚有庫存</p>
+
+          <form action="">
+            <div class="btn-group mb-5 w-100" role="group" aria-label="Basic outlined example">
+              <button type="button" class="btn btn-outline-primary border border-secondary">
+                -
+              </button>
+              <input type="text" class="form-control text-center rounded-0" value="1" />
+              <button type="button" class="btn btn-outline-primary border border-secondary">
+                +
+              </button>
+            </div>
+
+            <div class="row">
+              <div class="col-6 d-grid">
+                <input type="text" class="btn btn-outline-primary" value="加入購物車" />
+              </div>
+              <div class="col-6 d-grid">
+                <input type="text" class="btn btn-primary" value="立即購買" />
+              </div>
+            </div>
+
+            <button
+              class="btn btn-outline-primary bord border-secondary rounded-pill mt-3 text-secondary"
+            >
+              <i class="bi bi-basket me-2"></i>
+              加入最愛
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- 導覽與頁籤 -->
+      <div class="container w-75 d-flex flex-column justify-content-center">
+        <div class="row">
+          <div class="col">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#home"
+                  type="button"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                >
+                  Home
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                >
+                  Profile
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="contact"
+                  aria-selected="false"
+                >
+                  Contact
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active m-3"
+                id="home"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, dolore explicabo
+                eligendi expedita quam adipisci quo cupiditate aspernatur, corporis ex sint eum!
+                Pariatur, quod. Sit accusantium modi et optio ut voluptas aspernatur, quas pariatur
+                eaque accusamus quidem, alias, consequatur maiores deserunt possimus ratione
+                doloribus iure iste similique expedita mollitia? Vero ducimus asperiores hic? Unde
+                nobis illo assumenda dicta, vero ex.
+              </div>
+              <div
+                class="tab-pane fade m-3"
+                id="profile"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, dolore explicabo
+                eligendi expedita quam adipisci quo cupiditate aspernatur, corporis ex sint eum!
+                Pariatur, quod. Sit accusantium modi et optio ut voluptas aspernatur, quas pariatur
+                eaque accusamus quidem, alias, consequatur maiores deserunt possimus ratione
+                doloribus iure iste similique expedita mollitia? Vero ducimus asperiores hic? Unde
+                nobis illo assumenda dicta, vero ex.
+              </div>
+              <div
+                class="tab-pane fade m-3"
+                id="contact"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, dolore explicabo
+                eligendi expedita quam adipisci quo cupiditate aspernatur, corporis ex sint eum!
+                Pariatur, quod. Sit accusantium modi et optio ut voluptas aspernatur, quas pariatur
+                eaque accusamus quidem, alias, consequatur maiores deserunt possimus ratione
+                doloribus iure iste similique expedita mollitia? Vero ducimus asperiores hic? Unde
+                nobis illo assumenda dicta, vero ex.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-black mt-auto d-flex align-items-center justify-content-center">
+      <!-- <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+      </div> -->
+
+      <p class="text-center text-white mb-0" style="line-height: 56px">
+        Copyright © 2023 Football History Archives. All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- nav user button -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="col-12 col-md-8 offset-md-2 d-flex flex-column align-items-center">
+              <div>
+                <h3 class="text-center mb-3">登入kkday</h3>
+                <p class="text-center text-">立即登入，隨時收到獨家優惠</p>
+              </div>
+
+              <form class="needs-validation w-75" novalidate>
+                <div class="row">
+                  <div>
+                    <div class="form-group mb-3 icon-before">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="電子郵件"
+                        required
+                      />
+                      <div class="invalid-feedback">請輸入電子郵件</div>
+                    </div>
+
+                    <div class="form-group mb-1 icon-before2">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                        placeholder="密碼"
+                        required
+                      />
+                      <div class="invalid-feedback">請輸入密碼</div>
+                    </div>
+
+                    <p class="text-end"><a href="#" class="text-decoration-none">忘記密碼</a></p>
+                    <button type="submit" class="btn btn-primary w-100 py-2">登入</button>
+                    <p class="mt-1"><a href="#" class="text-decoration-none">立即註冊</a></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------->
+
+    <!-- nav shop button -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      data-bs-scroll="true"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">購物車</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <div>
+          <p class="fs-3">購物車是空的</p>
+          <p>共0件商品</p>
+          <a href="#" class="btn btn-primary">去購物</a>
+        </div>
+        <div class="dropdown mt-3">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+          >
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!------------------->
+
+    <a href="#" class="position-fixed bottom-0 end-0 me-3 mb-2">
+      <i class="bi bi-arrow-up-circle text-secondary fs-2"></i>
+    </a>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/validation.js"></script>
+
+    <script>
+      const img = document.querySelector(".img1");
+      const img1 = document.querySelector(".img2");
+      const img2 = document.querySelector(".img3");
+      const img3 = document.querySelector(".img4");
+
+      img1.addEventListener("click", function () {
+        if ((img.src = "../img/product.jpg")) {
+          img.src = img1.src;
+        } else {
+          // 如果不是，則改回原來的圖片
+          productImg.src = "../img/product.jpg";
+        }
+      });
+      img2.addEventListener("click", function () {
+        if (img.src != "../img/product2.jpg") img.src = img2.src;
+      });
+      img3.addEventListener("click", function () {
+        if ((img.src = "../img/product3.jpg")) img.src = img3.src;
+      });
+    </script>
+  </body>
+</html>
